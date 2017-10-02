@@ -19,9 +19,9 @@
 #
 
 terraform {
-	backend "atlas" {
-		name = "borgified/training"
-	}
+  backend "atlas" {
+    name = "borgified/training"
+  }
 }
 
 provider "aws" {
@@ -31,8 +31,8 @@ provider "aws" {
 }
 
 module "example" {
-	source = "./example-module"
-	command = "echo 'Goodbye World'"
+  source  = "./example-module"
+  command = "echo 'Goodbye World'"
 }
 
 variable "num_webs" {
@@ -64,4 +64,3 @@ output "ami" {
 output "public_dns" {
   value = "${aws_instance.web.*.public_dns}"
 }
-
