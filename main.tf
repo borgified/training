@@ -36,7 +36,7 @@ module "example" {
 }
 
 variable "num_webs" {
-  default = "3"
+  default = "4"
 }
 
 resource "aws_instance" "web" {
